@@ -1,5 +1,6 @@
 # MyMagicNet
-Deep Learning in Javascript. Port of karpathy MagicNet client.
+Deep Learning in Javascript.
+NodeJS port of karpathy MagicNet web client.
 
 References:
  http://cs.stanford.edu/people/karpathy/convnetjs/
