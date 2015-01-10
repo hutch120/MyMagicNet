@@ -5,10 +5,10 @@ References:
  http://cs.stanford.edu/people/karpathy/convnetjs/
  http://cs.stanford.edu/people/karpathy/convnetjs/demo/automatic.html
 
-Zip file:
- http://tinyurl.com/k7atsnh
+Github:
+ https://github.com/hutch120/MyMagicNet
 
-To run, extract files from zip, open nodejs command prompt, cd to the directory and run:
+To run open nodejs command prompt, cd to the directory and run:
  $ node myMagicNet.js 
 
 Dependencies (included in zip)
