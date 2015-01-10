@@ -37,6 +37,8 @@ function MyMagicNet() {
 		_.myMagicNetOpts.dataTitle = 'car';
 		// Set this to true to train, false to predict.
 		_.myMagicNetOpts.runTraining = false;
+		// Resume training from an existing trained model. TODO: implement
+		_.myMagicNetOpts.resumeTraining = true;
 		// Set this to true for faster code path testing
 		_.myMagicNetOpts.simpleTraining = false;
 
@@ -202,7 +204,7 @@ function MyMagicNet() {
 
 			var accuracyRounded = Math.round(acc * 100) / 100;
 			//debugObject('Prediction accuracy ' + accuracyRounded, predictions);
-			debug('Prediction accuracy ' + accuracyRounded);
+			debug('Prediction accuracy ' + (accuracyRounded*100) + '%');
 
 			// report accuracy
 			//debug("Test set accuracy: " + acc);		
@@ -361,10 +363,6 @@ function MyMagicNet() {
 		debug("Evaluated a total of " + _.batches_evaluated + " batches of candidates");
 		debug("Evaluated a total of " + _.folds_evaluated + "/" + _.magicNet.num_folds + " folds in current batch");
 
-		var legend = [];
-		for (var i = 0; i < _.magicNet.candidates.length; i++) {
-			legend.push('model ' + i);
-		}
 		setInterval(_.step, 0);
 	}
 
