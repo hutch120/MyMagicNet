@@ -34,7 +34,7 @@ function MyMagicNet() {
 		
 		_.myMagicNetOpts = {}
 		// Used to find training sets and save models.
-		_.myMagicNetOpts.dataTitle = 'car';
+		_.myMagicNetOpts.dataTitle = 'horse';
 		// Set this to true to train, false to predict.
 		_.myMagicNetOpts.runTraining = false;
 		// Resume training from an existing trained model. TODO: implement
@@ -337,7 +337,7 @@ function MyMagicNet() {
 	_.startCV = function () {  
 		
 		debug('startCV');
-		if ( _.myMagicNetOpts.simpleTraining	) {
+		if ( _.myMagicNetOpts.simpleTraining ) {
 			_.opts.train_ratio = 70 / 100.0; // default 70/100
 			_.opts.num_folds = 1; // default 1
 			_.opts.num_candidates = 5; // default 50

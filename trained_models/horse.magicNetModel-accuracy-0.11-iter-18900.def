@@ -1,0 +1,14 @@
+
+
+==================================================================================
+Iteration: 18900
+
+Model accuracy: 0.1111111111111111
+
+Training options set: {"train_ratio":0.7,"num_folds":1,"num_candidates":50,"num_epochs":20,"neurons_min":5,"neurons_max":30}
+
+Layer definitions: [{"type":"input","out_sx":1,"out_sy":1,"out_depth":14},{"type":"fc","num_neurons":24,"activation":"maxout","bias_pref":0,"in_sx":1,"in_sy":1,"in_depth":14},{"type":"softmax","num_classes":191,"in_sx":1,"in_sy":1,"in_depth":191}]
+
+Trainer definition: {"method":"adadelta","batch_size":18,"l2_decay":0.001941484393611582}
+
+==================================================================================

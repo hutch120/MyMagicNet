@@ -1,0 +1,14 @@
+
+
+==================================================================================
+Iteration: 79500
+
+Model accuracy: 0.11058823529411765
+
+Training options set: {"train_ratio":0.7,"num_folds":1,"num_candidates":50,"num_epochs":20,"neurons_min":5,"neurons_max":30}
+
+Layer definitions: [{"type":"input","out_sx":1,"out_sy":1,"out_depth":14},{"type":"softmax","num_classes":125,"in_sx":1,"in_sy":1,"in_depth":125}]
+
+Trainer definition: {"method":"sgd","learning_rate":0.0034995364090427607,"momentum":0.9,"batch_size":93,"l2_decay":0.000949255503460382}
+
+==================================================================================
