@@ -36,7 +36,7 @@ function MyMagicNet() {
 		// Used to find training sets and save models.
 		_.myMagicNetOpts.dataTitle = 'horse';
 		// Set this to true to train, false to predict.
-		_.myMagicNetOpts.runTraining = false;
+		_.myMagicNetOpts.runTraining = true;
 		// Resume training from an existing trained model. TODO: implement
 		_.myMagicNetOpts.resumeTraining = true;
 		// Set this to true for faster code path testing
@@ -336,7 +336,8 @@ function MyMagicNet() {
 	// Start Training ConVnetJS
 	_.startCV = function () {  
 		
-		debug('startCV');
+		debug('Start ConvnetJS');
+		
 		if ( _.myMagicNetOpts.simpleTraining ) {
 			_.opts.train_ratio = 70 / 100.0; // default 70/100
 			_.opts.num_folds = 1; // default 1
@@ -346,11 +347,11 @@ function MyMagicNet() {
 			_.opts.neurons_max = 10; // default 30
 		} else {
 			_.opts.train_ratio = 70 / 100.0; // default 70/100
-			_.opts.num_folds = 1; // default 1
-			_.opts.num_candidates = 50; // default 50
-			_.opts.num_epochs = 20; // default 20
-			_.opts.neurons_min = 5; // default 5
-			_.opts.neurons_max = 30; // default 30
+			_.opts.num_folds = 3; // default 1
+			_.opts.num_candidates = 70; // default 50
+			_.opts.num_epochs = 30; // default 20
+			_.opts.neurons_min = 15; // default 5
+			_.opts.neurons_max = 50; // default 30
 		}
 		
 		debugObject('MagicNet Options: ', _.opts);
@@ -372,7 +373,7 @@ function MyMagicNet() {
 		_.iter++;
 		_.magicNet.step();
 		
-		if (_.iter % 300 == 0) {
+		if (_.iter % 1000 == 0) {
 
 			// var vals = _.magicNet.evalValErrors();
 			//debugObject('vals', vals);
